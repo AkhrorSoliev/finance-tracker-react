@@ -5,14 +5,12 @@ import { useState } from 'react'
 function Login() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const [displayName, setDisplayName] = useState('')
 
   const handleSubmit = (e) => {
     e.preventDefault()
     console.log({
       email,
       password,
-      displayName,
     })
   }
 
@@ -38,17 +36,6 @@ function Login() {
             setPassword(e.target.value)
           }}
           value={password}
-          required
-        />
-      </label>
-      <label>
-        <span>displayName:</span>
-        <input
-          type="text"
-          onChange={(e) => {
-            setDisplayName(e.target.value)
-          }}
-          value={displayName}
           required
         />
       </label>
